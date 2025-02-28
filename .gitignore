@@ -86,6 +86,3 @@ autodl-tmp/
 .condarc
 .profile
 .wget-hsts
-
-# docker scripts
-dockerScripts/
