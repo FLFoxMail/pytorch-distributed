@@ -30,4 +30,4 @@ COPY . /app
 WORKDIR /app
 
 # 设置默认命令
-CMD ["/bin/bash"]
+# CMD ["/bin/bash"]
