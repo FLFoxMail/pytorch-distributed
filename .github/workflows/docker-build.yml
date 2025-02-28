@@ -25,5 +25,5 @@ jobs:
           platforms: linux/amd64
           push: true
           tags: |
-            ghcr.io/${{ github.repository }}:cuda11.8-py3.10
-            ghcr.io/${{ github.repository }}:latest
+            ghcr.io/flfoxmail/pytorch-distributed:cuda11.8-py3.10
+            ghcr.io/flfoxmail/pytorch-distributed:latest
