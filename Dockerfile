@@ -10,7 +10,7 @@ RUN apt-get update && \
     apt-get install -y --no-install-recommends \
     wget \
     && rm -rf /var/lib/apt/lists/*
-    
+
 RUN wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh && \
     bash Miniconda3-latest-Linux-x86_64.sh -b -p /miniconda3 && \
     rm Miniconda3-latest-Linux-x86_64.sh
@@ -26,5 +26,8 @@ RUN /bin/bash -c "source activate myenv && \
     pip install --no-cache-dir -r requirements.txt"
 
 # 复制项目代码
-COPY ..\
-WORKDIR ..\
+COPY . /app
+WORKDIR /app
+
+# 设置默认命令
+CMD ["/bin/bash"]
