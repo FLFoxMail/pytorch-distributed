@@ -26,7 +26,6 @@ mv requirements.tmp requirements.txt
 # 添加 pytorch 官方源 -extra-index-url  https://download.pytorch.org/whl/cu118 和 阿里云源 - extra-index-url https://mirrors.aliyun.com/pypi/simple/
 if ! grep -q "^--i" requirements.txt; then
   sed -i '1i--i https://download.pytorch.org/whl/cu118 --i https://mirrors.aliyun.com/pypi/simple/' requirements.txt
-
 fi
 
 
