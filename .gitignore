@@ -1,0 +1,91 @@
+# ====================== 核心排除项 ======================
+# 数据集与模型权重
+data/
+datasets/
+*.weights
+*.h5
+*.pth
+*.ckpt
+*.bin
+
+# 训练日志与结果
+logs/
+outputs/
+runs/
+*.log
+*.csv
+
+# 环境配置文件
+.env
+*.yml
+*.yaml
+
+# ====================== 系统自动生成 ======================
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Linux
+*~
+
+# ====================== 开发环境文件 ======================
+# IDE
+.vscode/
+.idea/
+*.code-workspace
+
+# Jupyter
+.ipynb_checkpoints/
+# Python
+__pycache__/
+*.py[cod]
+.python-version
+
+# 虚拟环境
+venv/
+.venv/
+env/
+conda/
+
+# ====================== 构建产物 ======================
+# 编译文件
+*.so
+*.o
+*.a
+
+# 打包文件
+*.egg-info/
+dist/
+build/
+
+# ====================== 安全相关 ======================
+# 密钥文件
+*.pem
+*.key
+*.cert
+
+# 缓存凭证
+.cache/
+.kaggle/
+.nv/
+
+miniconda3/
+autodl-tmp/
+.vscode-server/
+.ssh/
+.conda/
+.jupyter/
+.dotnet/
+.ipython/
+.local/
+.bash_history
+.bashrc
+.condarc
+.profile
+.wget-hsts
+
+# docker scripts
+dockerScripts/
