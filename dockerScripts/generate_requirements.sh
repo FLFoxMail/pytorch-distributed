@@ -23,10 +23,10 @@ fi
 # 移动临时文件
 mv requirements.tmp requirements.txt
 
-# 添加阿里云源
-if ! grep -q "^--find-links" requirements.txt; then
-  sed -i '1i--find-links https://mirrors.aliyun.com/pytorch-wheels/cu118' requirements.txt
-fi
+# # 添加阿里云源
+# if ! grep -q "^--find-links" requirements.txt; then
+#   sed -i '1i--find-links https://mirrors.aliyun.com/pytorch-wheels/cu118' requirements.txt
+# fi
 
 echo "生成成功！"
 cat requirements.txt
