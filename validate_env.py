@@ -8,5 +8,4 @@ def check_env():
         print(f"GPU Device: {torch.cuda.get_device_name(0)}")
 
 if __name__ == "__main__":
-    check_env() 
-    
+    check_env()
