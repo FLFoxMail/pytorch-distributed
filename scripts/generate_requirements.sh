@@ -31,8 +31,8 @@ mv requirements.tmp requirements.txt
 
 
 # 添加阿里云源
-if ! grep -q "^--i" requirements.txt; then
-  sed -i '1i--i https://mirrors.aliyun.com/pytorch-wheels/cu118' requirements.txt
+if ! grep -q "^--index-url" requirements.txt; then
+  sed -i '1i--index-url https://mirrors.aliyun.com/pytorch-wheels/cu118' requirements.txt
 fi
 
 echo "生成成功！"

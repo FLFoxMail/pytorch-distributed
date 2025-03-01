@@ -1,2 +1,2 @@
---i https://mirrors.aliyun.com/pytorch-wheels/cu118
+--index-url https://mirrors.aliyun.com/pytorch-wheels/cu118
 torch==2.0.1+cu118
