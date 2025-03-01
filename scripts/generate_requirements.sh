@@ -23,17 +23,17 @@ fi
 # 移动临时文件
 mv requirements.tmp requirements.txt
 
-# # 添加 pytorch 官方源 -extra-index-url  https://download.pytorch.org/whl/cu118 和 阿里云源 - extra-index-url https://mirrors.aliyun.com/pypi/simple/
-# if ! grep -q "^--i" requirements.txt; then
-#   sed -i '1i--i https://download.pytorch.org/whl/cu118' requirements.txt
-# fi
+# 添加 pytorch 官方源 -extra-index-url  https://download.pytorch.org/whl/124 和 阿里云源 - extra-index-url https://mirrors.aliyun.com/pypi/simple/
+if ! grep -q "^--index-url" requirements.txt; then
+  sed -i '1i--index-url https://download.pytorch.org/whl/cu124' requirements.txt
+fi
 
 
 
 # 添加阿里云源
-if ! grep -q "^--index-url" requirements.txt; then
-  sed -i '1i--index-url https://mirrors.aliyun.com/pytorch-wheels/cu118' requirements.txt
-fi
+# if ! grep -q "^--index-url" requirements.txt; then
+#   sed -i '1i--index-url https://mirrors.aliyun.com/pytorch-wheels/cu118' requirements.txt
+# fi
 
 echo "生成成功！"
 cat requirements.txt
