@@ -1,0 +1,16 @@
+
+#!/bin/sh
+echo "Running pre-commit hook..."
+
+
+
+# 监控 Python 和 Notebook 文件变更
+changed_files=$(git diff --cached --name-only | grep -E '.*\.(py|ipynb)$')
+echo "检测到的变更文件：$changed_files"
+# 如果有代码变更则更新依赖
+if [ ! -z "$changed_files" ]; then
+  echo "检测到 Python 代码变更，更新依赖列表..."
+  ./scripts/generate_requirements.sh
+
+  git add requirements.txt
+fi
