@@ -80,12 +80,6 @@ def load_train_obj():
     print("优化器加载完成")
     return train_set, model, optimizer
 
-def main(device, total_epochs, save_every, batch_size):
-    data_set, model, optimizer = load_train_obj()
-    train_data = prepare_dataLoader(data_set, batch_size)
-    trainer = Trainer(model, train_data, optimizer, device, save_every)
-    trainer.train(total_epochs)
-
 # 改动点4 修改 dataSampler，使用分布式采样器，用来确保在分布式环境，数据不会被重复采样
 # 把 shuffle 参数设置为 False 的原因是，分布式采样器会自动进行 shuffle
 def prepare_dataLoader(dataset, batch_size):    
