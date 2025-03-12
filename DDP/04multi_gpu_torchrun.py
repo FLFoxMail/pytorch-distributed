@@ -20,7 +20,7 @@ def ddp_setup():
     # nccl 是一种用于 GPU 之间通信的库，在多 GPU 训练中，nccl 是默认的通信后端， nccl 的含义是 
     # NVIDIA Collective Communications Library 即 NVIDIA 集合通信库
     # 除了 nccl 还有 gloo 和 mpi，gloo 是一种通用的通信后端， mpi 是一种用于分布式计算的通信协议
-    init_process_group(backend='nccl', init_method="env://?use_libuv=False")
+    init_process_group(backend='nccl')
 
     
 # 重新定义 Trainner 改动点在于，包装模型
