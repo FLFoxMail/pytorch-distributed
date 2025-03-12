@@ -86,3 +86,4 @@ autodl-tmp/
 .condarc
 .profile
 .wget-hsts
+checkpoint.pt

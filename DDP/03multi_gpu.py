@@ -94,6 +94,9 @@ def start(rank: int, world_size: int, total_epochs: int, save_every: int, batch_
     trainer = Trainer(model, train_data, optimizer, rank, save_every)
     trainer.train(total_epochs)
     
+    # 改动点 6 训练结束后，需要调用 destroy_process_group 函数，销毁多进程环境
+    destroy_process_group()
+    
     # 配置参数并启动
 if __name__ == "__main__":
     total_epochs = 5
